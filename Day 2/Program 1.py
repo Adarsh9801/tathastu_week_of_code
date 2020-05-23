@@ -1,27 +1,35 @@
-a=int(input("Enter the number to be identified = "))
-if a%2==0:
-    print(a,"is even")
+        
+n= int(input("Enter the no.:"))
+stt = input("Enter the string: ")
+n1 = input("Enter a no. to check armstrong no.:")
+if(n%2 == 0):
+    print("No. is even.")
 else:
-    print(a,"is odd")
-if a>1:    
-    for i in range(2,a):
-        if a%i==0:
-            print(a,"is not prime")
-            break
-    else:
-        print(a,"is prime")
-l=len(str(a))        
-for i in range(l%2):
-    if str(a)[i]!=str(a)[l-1-i]:
-        print(a,"is not palidrome")
-        break
+    print("No. is odd. ")
+
+count =0
+for i in range(2,n):
+    if(n%i == 0):
+        count+=1
+
+if(count==0):
+    print("No. is prime.")
 else:
-     print(a,"is palidrome")
-s=str(a)
-r=0
-for i in range(l):
-    r=r+int(s[i])**3
-    if r==int(s):
-        print(a,"is an armstrong number")
+    print("No. is not prime.")
+
+rstt = stt[::-1]
+if(stt == rstt):
+    print("String is Palindrome.")
+
 else:
-    print(a,"is not an armstrong number")          
+    print("String is not Palindrome.")
+
+arm=0
+for i in n1:
+    arm = arm + int(i)**3
+
+if(arm == int(n1)):
+    print("No. is armstrong")
+
+else:
+    print("No. is not armstrong") 
