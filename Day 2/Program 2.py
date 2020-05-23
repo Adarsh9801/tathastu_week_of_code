@@ -9,7 +9,7 @@ elif(n==1):
     print(a)
 
 else:
-    print("Fibonacci sequence:")
+    print("Fibonacci series:")
     while(count<n):
         print(a, end=' ')
         sum = a + b
